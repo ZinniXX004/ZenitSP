@@ -84,7 +84,7 @@ st.sidebar.download_button(
 # Add a button to download the ECG plot image file
 st.sidebar.markdown("## Download ECG Plot Image (Full Visualization)")
 
-# Save the ECG plot as a temporary image file (PNG)
+# Save the ECG plot as a temporary image (PNG)
 temp_dir = tempfile.gettempdir()
 temp_image_path = os.path.join(temp_dir, "ecg_plot.png")
 plt.savefig(temp_image_path, format="png")
