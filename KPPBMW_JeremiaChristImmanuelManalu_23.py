@@ -57,7 +57,7 @@ plt.grid(True)
 st.pyplot(plt)
  
 # Plot and display the Full ECG data (2) and the 10 : 500 data ratio in (1)
-st.write("## ECG Data Visualization Full")
+st.write("## ECG Data Full Visualization")
 
 # Configure the plot (2) and display it -> Full ECG Data
 Ndata = len(ecg_data)
