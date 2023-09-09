@@ -66,7 +66,7 @@ plt.plot(ECG_Full, ecg_data)
 st.pyplot(plt) 
 
 # Add a button to download the ECG data in raw text
-st.sidebar.markdown("## Download ECG Data (Raw)")
+st.sidebar.markdown("## Download raw ECG Data")
 
 # Save the ECG data to a temporary CSV file
 temp_dir = tempfile.gettempdir()
