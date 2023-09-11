@@ -68,7 +68,7 @@ st.pyplot(plt)
 # Add a button to download the ECG data in raw text
 st.sidebar.markdown("## Download raw ECG Data")
 
-# Save the ECG data to a temporary CSV extension
+# Save the ECG data to a temporary CSV file
 temp_dir = tempfile.gettempdir()
 temp_file_path = os.path.join(temp_dir, "ecg_data.csv")
 np.savetxt(temp_file_path, ecg_data, delimiter=',', fmt='%f')
