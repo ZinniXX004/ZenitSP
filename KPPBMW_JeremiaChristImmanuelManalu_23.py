@@ -68,7 +68,7 @@ st.pyplot(plt)
 # Add a button to download the ECG data in raw text
 st.sidebar.markdown("## Download raw ECG Data")
 
-# Save the ECG data to a temporary CSV file
+# Save the ECG data to a temporary CSV extension
 temp_dir = tempfile.gettempdir()
 temp_file_path = os.path.join(temp_dir, "ecg_data.csv")
 np.savetxt(temp_file_path, ecg_data, delimiter=',', fmt='%f')
@@ -93,5 +93,6 @@ plt.savefig(temp_image_path, format="png")
 with open(temp_image_path, "rb") as img_file:
     img_bytes = img_file.read()
     img_b64 = base64.b64encode(img_bytes).decode()
+    
 # Use HTML anchor tag to provide the download link
 st.sidebar.markdown(f'<a href="data:image/png;base64,{img_b64}" download="ecg_plot.png">Click here to download ECG Plot Image</a>', unsafe_allow_html=True)
